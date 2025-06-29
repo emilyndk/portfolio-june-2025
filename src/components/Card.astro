@@ -4,16 +4,16 @@ import Button from "./Button.astro";
 ---
 
 <article
-  class="  bg-cover bg-center h-[500px] w-[300px] group   "
+  class="border border-magic-500 rounded-sm  bg-cover bg-center h-[500px] w-[300px] group   "
   style={`background-image: url(${bgImg});`}
 >
   <div
-    class="bg-obsidian bg-opacity-[99%] p-padding-s flex flex-col justify-between h-full  opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+    class="bg-magic-500 bg-opacity-[99%] p-spacebar-ms flex flex-col justify-between h-full  opacity-0 group-hover:opacity-100 transition-opacity duration-300"
   >
     <!-- Container for header and text -->
-    <div class="flex flex-col gap-padding-xs items-center ">
+    <div class="flex flex-col gap-spacebar-ms items-center ">
       <h1
-        class="text-center text-mist  font-p-regular text-p-l-d underline "
+        class="text-start text-sand-500  font-heading text-p-l-d  "
       >
         {
           header.split("\n").map((line) => (
@@ -26,7 +26,7 @@ import Button from "./Button.astro";
 
       <!-- Make the text scrollable if it overflows -->
       <p
-        class="text-mist font-p-light text-p-s-d overflow-y-auto max-h-[280px]"
+        class="text-sand-500 font-body text-p-s-m lg:text-p-m overflow-y-auto max-h-[290px]"
       >
         {text}
       </p>
@@ -34,7 +34,7 @@ import Button from "./Button.astro";
 
     <!-- Button container -->
     <div class="flex flex-col items-center">
-      <Button size="mobil" variant="secondary" class="" input="Besøg"></Button>
+      <Button size="mobil" variant="tertiary" class="" input="Besøg"></Button>
     </div>
   </div>
 </article>

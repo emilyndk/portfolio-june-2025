@@ -7,44 +7,41 @@ export default {
 	theme: {
 
        
+
          
       
           extend: {
+            colors: {
+        transparent: "transparent",
+        current: "currentColor",
 
-             /* Tilføj din egen farvepalette nedenfor */
-        colors: {
-          transparent: 'transparent',
-          current: 'currentColor',
-          
-
+        sand: {
          
-              
+          500: "#efeae3",
+          300: "#EFEAE34D",
           
+        },
 
-          'violet': '#C8AAFF  ',
-          'twilight':'#6E56E7     ',
-          'obsidian': '#161719',
-          'mist': '#DBD7E9 ',
+        magic: {
+          500: "#B44E9E",
+          300: "#B44E9E4D",
+        },
+
+        obsidian: {
+          500: "#1E1E1E",
+        },
       },
 
+             /* Tilføj din egen farvepalette nedenfor */
+        
          spacing: {
-            'padding-xxs': '10px',
-            'padding-xs': '15px',
-            'padding-s': '24px',
-            'padding-m': '34px',
-            'padding-ml': '40px',
-            'padding-l': '90px',
-            'padding-xl': '128px',
-            
-            'radius-s':'10px',
-            'radius-full':'999px',
-            
-            'stroke-xs':'1px',
-            'stroke-s':'1.5px',
+            'spacebar-dl': '200px',
+            'spacebar-dm': '136px',
+            'spacebar-ds': '32px',
 
-            
-    
-      
+            'spacebar-ml': '80px',
+            'spacebar-mm': '70px',
+            'spacebar-ms': '16px',
             
           },
 
@@ -61,62 +58,58 @@ export default {
           },
             
 
-              gridTemplateColumns: {
-                'grid-mobil': 'repeat(4, 1fr)',
-                'grid-desktop': 'repeat(12, 1fr)',
-        
-              },
+               gridTemplateColumns: {
+        "grid-mobil": "repeat(12, 1fr)",
+        "grid-tablet": "repeat (12, 1fr)",
+        "grid-desktop": "repeat(12, 1fr)",
+      },
 
+      margin: {
+        "margin-mobil": "16px",
+        "margin-tablet": "32px",
+        "margin-desktop": "64px",
+      },
 
-              margin:{
-                'margin-mobil': '40px',
-                'margin-desktop': '60px',
-            },
-            
-            gap:{
-                'gap-mobil': '10px',
-                'gap-desktop': '20px',
-            },
+      gap: {
+        "gap-mobil": "4px",
+        "gap-tablet": "6px",
+        "gap-desktop": "8px",
+      },
               
               // Headings desktop
               fontSize: {
-              'h1-d': ['128px', { lineHeight: 'auto', }],
-              'h2-d': ['60px', { lineHeight: 'auto',}],             
-              'h3-d': ['36px', { lineHeight: 'auto',}],
-
+              'h1-d': ['120px', { lineHeight: 'auto', }],
+              'h2-d': ['96px', { lineHeight: 'auto',}],             
+               'h3-d': ['10px', { lineHeight: 'auto',  }],
               // Headings mobile
-              'h1-m': ['60px', { lineHeight: 'auto' }],
-              'h2-m': ['40px', { lineHeight: 'auto',  }],
+              'h1-m': ['44px', { lineHeight: '50px' }],
+              'h2-m': ['56px', { lineHeight: 'auto',  }],
               'h3-m': ['30px', { lineHeight: 'auto',  }],
              
       
               // Body desktop
-              'button-d': ['36px', { lineHeight: 'auto',  }],
-              'p-l-d': ['36px', { lineHeight: 'auto',  }],
-              'p-m-d': ['22px', { lineHeight: 'auto',  }],
-              'p-s-d': ['15px', { lineHeight: 'auto',  }],
+              'p-l-d': ['32px', { lineHeight: 'auto',  }],
+              'p-d': ['24px', { lineHeight: 'auto',  }],
+              'p-s-d': ['20px', { lineHeight: 'auto',  }],
+                'display-d': ['64px', { lineHeight: 'auto',  }],
              
 
                // Body mobile
-               'button-m': ['20px', { lineHeight: 'auto',  }],
-               'p-l-m': ['24px', { lineHeight: 'auto',  }],
-               'p-m-m': ['16px', { lineHeight: 'auto',  }],
-               'p-s-m': ['12px', { lineHeight: 'auto',  }],
+              
+               'p-l-m': ['30px', { lineHeight: 'auto',  }],
+               'p-m': ['13px', { lineHeight: 'auto',  }],
+               'p-s-m': ['10px', { lineHeight: 'auto',  }],
+               'display-m': ['24px', { lineHeight: 'auto',  }],
                 
-                // Link
-                'link-m': ['36px', { lineHeight: 'auto',  }],
-                'link-s': ['20px', { lineHeight: 'auto',  }],
-
+              
                 
     
             },
 
             fontFamily:{
-              'header':['"Shrikhand"', 'sans-serif'],
-              'p-light-italic':["Sansation Light Italic",'sans-serif'],
-              'p-light':['"Sansation Light"','sans-serif'],
-              'p-regular':['"Sansation Regular"','sans-serif'],
-              'p-italic':['"Sansation Italic"','sans-serif'],
+              'heading':['"Tilt Warp"', 'sans-serif'],
+              'body':["Poppins",'sans-serif'],
+              
             }
             
 

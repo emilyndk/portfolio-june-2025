@@ -11,11 +11,12 @@ import Carrousel from "../components/Carrousel.astro";
 import Header from "../components/Header.astro";
 const projects = [
   {
-    header: "Book in a Box",
-    text: "Tredje semesters eksamensopgave gik ud på at lave et unsolicited redesign af en selvvalgt virksomhed. Kravet var at det skulle være en abonnementbaseret virksomhed. Vi ville gerne finde en lidt mindre virksomhed, og vi browsede lidt på nettet indtil vi så stødte på Book in a Box. Vi syntes det var et fedt koncept, altså at de sælger abonnement på fantasy bøger, og hver måned får man sendt en boks med en bog og goodies. Det er ejeren der vælger bogen, og det fungerer lidt som en læseklub, fordi brugerne taler om bøgerne på Book in a Box' instagram. Vores mål for redesignet var at få fantasy aspektet til at være meget mere tydelig visuelt på selve hjemmesiden, samt gøre den mere brugervenlig og styrke kontinuiteten ift brugen af komponenter og farver. Vi eksperimenterede rigtig meget og kom til sidst frem til denne eventyrlige visuelle stil. Det her er en af projekter, jeg er allermest stolt af, og der er blevet lagt rigtig meget arbejde i fra alle i min gruppe. Vi lavede det hele sammen i designdelen, og fordelte arbejdet da det kom til koden. Min rolle var at kode forsiden, menuen og at tegne de håndtegnede illustrationer. Det var et godt samarbejde og har fået meget læring som jeg vil tage med mig.",
-    bgImg: "/img/bookinabox.webp",
-    url: "https://bookinabox.netlify.app/",
+    header: "Stoisk Ro",
+    text: "Mit afsluttende eksamensprojekt på KEA var udviklingen af Stoisk Ro. En helt ny hjemmeside til en samtaleterapeut med speciale i stoicisme. Det var et samarbejde med en af mine gruppemedlemmers mand, og vi havde stort set frie rammer, hvilket gav os mulighed for at skabe noget fra bunden (baseret på en hel del grundig research af virksomhed og målgruppe vha. diverse brugertests, surveys, et langt interview, SWOT, BMC og andre værktøjer og metoder). Vi lagde stor vægt på projektstyringen, og det kunne mærkes. Ved hjælp af Double Diamond-metoden og Gannt chart lykkedes det os at planlægge effektivt og undgå den typiske stress til sidst med koden. Det gjorde processen fokuseret og behagelig. Resultatet blev et projekt, vi er meget stolte af, både fordi det er teknisk gennemarbejdet og processen fungerede så godt. Vores censor var imponeret over vores projekt, og hun delte os på sin Linkedin. Vi fik topkarakter.",
+    bgImg: "/img/stoiskro.png",
+    url: "https://stoiskro.netlify.app/",
   },
+ 
   {
     header: "Höjskolendk",
     text: "Höjskolendk er en rejsehøjskole. Dette projekt handlede om at lave et redesign af Höjskolendk, med fokus på at forbedre brugeroplevelsen og optimere den visuelle identitet. Målet var ikke kun at opdatere designet, men også at arbejde med og implementere et solidt designsystem. En stor del af casen var at overføre designsystemet fra Figma til kode, hvilket styrkede både samarbejdet mellem design og udvikling og sikrede et mere effektivt workflow.",
@@ -31,23 +32,27 @@ const projects = [
 ];
 ---
 
-<MainLayout title="Portfolio">
+<MainLayout title="Emily's Portfolio">
    
-    
-  <section
-    id="hero"
-    class="h-screen flex flex-col justify-center gap-padding-ml items-center border-b border-obsidian"
-  >
-    <h1 id="portfolio-h1" class="text-obsidian font-header text-h1-m lg:text-h1-d test "></h1>
-    <p class="text-obsidian text-p-l-m lg:text-p-l-d font-p-light-italic">
-      emilys webportfolio 2025
-    </p>
-    <a href="#projekter" class="lg:hidden "
-      ><Button variant="primary" size="mobil" input="Se projekter" /></a
-    >
-    <a id="" href="#projekter" class="hidden lg:block"
-      ><Button variant="primary" size="desktop" input="Se projekter" /></a
-    >
+  <section id="hero" class="h-screen pt-spacebar-mm pb-spacebar-mm lg:pt-spacebar-dm">
+
+    <div id="hero-m" class="">
+<div class="mx-margin-mobil grid grid-cols-grid-mobil gap-gap-mobil">
+  <h1 class="font-heading text-h1-m text-obsidian-500 col-start-1 col-span-10">Emily Fang Xiong Nielsen</h1>
+<p class="text-magic-500 font-body text-display-m -rotate-1 col-start-1 col-span-9 -mt-2">Multimediedesigner</p>
+<p class="text-obsidian-500 font-body text-p-m col-start-1 col-end-7 pt-spacebar-ms">I am passionate about creating aesthetic digital solutions with a strong focus on the user.</p>
+<div class="flex flex-col gap-spacebar-ms col-start-8 col-span-full pt-spacebar-ms">
+  <Button href="#cv" variant="primary" input="Download CV"></Button>
+  <Button href="#projekter" variant="secondary" input="Se projekter"></Button>
+</div>
+</div>
+<div class="flex flex-col justify-center items-center py-spacebar-mm"><img id="scroll-arrow" class="w-[45px]" src="/svg/arrow.svg" alt="Pil ned"></div>
+</div>
+
+ <div id="hero-d" class="lg:mx-margin-desktop lg:grid-cols-grid-desktop  lg:gap-gap-desktop">
+<h1 class="font-heading text-h1-m text-obsidian-500"></h1>
+</div>
+
   </section>
 
   <section id="om" class="border-b border-obsidian">
@@ -225,7 +230,7 @@ const projects = [
 
     <div
       id="kvalifikationer-baggrund-mobil"
-      class="border border-obsidian lg:hidden flex-col flex justify-center items-center gap-padding-s mx-padding-ml my-padding-ml px-padding-xs py-padding-ml"
+      class="border border-obsidian lg:hidden flex-col flex justify-center items-center "
     >
       <div class="flex flex-col gap-padding-s items-center justify-center">
         <h3 class="text-obsidian font-header text-h3-m">Kvalifikationer</h3>
@@ -378,13 +383,13 @@ const projects = [
   </section>
 
 
-<section id="projekter" class="p-padding-ml">
+<section id="projekter" class="py-spacebar-ms lg:py-spacebar-ds mx-margin-mobil">
 
-<div class="flex flex-col justify-center items-center gap-padding-m">
+<div class="flex flex-col justify-start items-start gap-spacebar-ds lg:gap-[48px]">
 
-<h2 id="projekter-h1" class="font-header text-h2-m lg:text-h2-d text-obsidian"></h2>
+<h2 id="projekter-h1" class="font-heading text-h2-m lg:text-h2-d text-obsidian-500"></h2>
 
-<div class="lg:flex gap-padding-s hidden">
+<div class="flex flex-col lg:flex-row gap-spacebar-ms lg:gap-spacebar-ds ">
   {projects.map((project) => (
     <a href={project.url} target="_blank" class="">
       <Card 
@@ -398,7 +403,7 @@ const projects = [
 </div>
 
 
-<Carrousel class=""></Carrousel>
+
 
 <a href="/projekter"><div class="lg:hidden"><Button variant="primary" size="mobil" input="Se alle projekter"></Button></div><div class="lg:block hidden"><Button variant="primary" size="desktop" input="Se alle projekter"></Button></div></a>
 
@@ -421,7 +426,7 @@ const projects = [
  import { TextPlugin } from "gsap/TextPlugin";
  gsap.registerPlugin(TextPlugin)
  
- gsap.registerPlugin(ScrollTrigger);
+gsap.to("#scroll-arrow",  { y: -10,  delay: 0.8, ease: "power1.out", duration: 0.6, repeat: -1, yoyo: true,})
 
  //replaces yourElement's text with "This is the new text" over the course of 2 seconds
 gsap.to("#portfolio-h1", {

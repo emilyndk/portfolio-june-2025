@@ -3,124 +3,146 @@ import Link from "./Link.astro";
 import Button from "./Button.astro";
 ---
 
-<footer id="" class="">
-  <div id="footer-mobil" class="lg:hidden flex flex-col gap-padding-ml py-padding-ml border-t border-obsidian justify-center">
-    <div class="flex flex-col items-center gap-padding-xxs">
-      <a href="https://www.instagram.com/exiongart/">
-        <img src="/svg/instagram-icon.svg" alt="Instagram ikon" /></a
+<footer id="footer" class="">
+  <div id="footer-mobil" class="py-spacebar-mm lg:hidden flex flex-col h-full gap-[76px] justify-center">
+    
+<div class="flex flex-col items-center gap-[40px] ">
+    <div class="flex flex-col items-center gap-[8px] ">
+      <a href="https://www.linkedin.com/in/emily-fang-xiong-nielsen-456326327/"
+        ><img src="/svg/linkedin.svg" alt="LinkedIn ikon" /></a
       >
       <Link
         variant="secondary"
-        size="xsmall"
-        href="https://www.instagram.com/exiongart/"
-        input="@exiongart"
+        size="regular"
+        href="https://www.linkedin.com/in/emily-fang-xiong-nielsen-456326327/"
+        input="Emily Fang Xiong Nielsen"
       />
     </div>
 
-    <div class="flex flex-col items-center gap-padding-xxs">
-      <a href="https://www.linkedin.com/in/emily-fang-xiong-nielsen-456326327/"
-        ><img src="/svg/linkedin-icon.svg" alt="LinkedIn ikon" /></a
-      >
-      <Link
-        variant="secondary"
-        size="xsmall"
-        href="https://www.linkedin.com/in/emily-fang-xiong-nielsen-456326327/"
-        input="Emily Fang Xiong"
-      />
-    </div>
-    <div class="flex flex-col items-center gap-padding-xxs">
+    
+
+
+    <div class="flex flex-col items-center gap-[8px] ">
       <a href="tel:+4542416188">
-        <img src="/svg/tlf-icon.svg" alt="Tlf ikon" /></a
+        <img src="/svg/tlf.svg" alt="Tlf ikon" /></a
       >
       <Link
         variant="secondary"
-        size="xsmall"
+        size="regular"
         href="tel:+4542416188"
-        input="42416188"
+        input="+45 42416188"
       />
     </div>
-    <div class="flex flex-col items-center gap-padding-xxs">
+    <div class="flex flex-col items-center gap-[8px] ">
       <a href="mailto:emily.nielsen00@gmail.com"
-        ><img src="/svg/mail-icon.svg" class="max-w-fit" alt="Mail ikon" /></a
+        ><img src="/svg/mail.svg" class="max-w-fit" alt="Mail ikon" /></a
       >
       <Link
         variant="secondary"
-        size="xsmall"
+        size="regular"
         href="mailto:emily.nielsen00@gmail.com"
         input="@emily.nielsen09@gmail.com"
       />
     </div>
 
-    <div class="flex flex-col items-center gap-padding-xxs">
-      <a href="#hero"><Button variant="primary" size="mobil" input="Top" /></a>
+ <div class="flex flex-col items-center gap-[8px] ">
+     
+        <img src="/svg/lokation.svg" class="max-w-fit" alt="Mail ikon" />
+      <Link
+        variant="secondary"
+        size="regular"
+        input="København, DK"
+      />
+    </div>
+
+    </div>
+
+
+
+    <div class="flex flex-col items-center gap-[18px] ">
+     
+     
+   
 
       <a href="/pdf/CV_v-figma.pdf"
       download="CV_v-figma.pdf"
         ><Button variant="primary" size="mobil" input="Download CV" /></a
       >
+
+        <a href="#hero" class="text-magic-300 font-body text-p-m">Back to top ↑</a>
     </div>
   </div>
 
   <div
     id="footer-desktop"
-    class="hidden lg:flex flex-col gap-padding-l justify-center h-[446px] border-t border-obsidian"
+    class="hidden lg:flex flex-col gap-[40px] justify-center h-[446px] "
   >
-    <div class="flex justify-center gap-padding-xl">
-      <div class="flex flex-col items-center gap-padding-xxs">
-        <a href="https://www.instagram.com/exiongart/">
-          <img src="/svg/instagram-icon.svg" alt="Instagram ikon" /></a
-        >
-        <Link
-          variant="secondary"
-          size="xsmall"
-          href="https://www.instagram.com/exiongart/"
-          input="@exiongart"
-        />
-      </div>
+    <div class="grid grid-cols-grid-desktop gap-gap-desktop mx-margin-mobil">
+      
 
-      <div class="flex flex-col items-center gap-padding-xxs">
+      <div class="col-start-4 pb-spacebar-ds col-end-8 flex justify-start  flex-row items-center gap-[8px]">
         <a
           href="https://www.linkedin.com/in/emily-fang-xiong-nielsen-456326327/"
-          ><img src="/svg/linkedin-icon.svg" alt="LinkedIn ikon" /></a
+          ><img src="/svg/linkedin.svg" alt="LinkedIn ikon" /></a
         >
         <Link
           variant="secondary"
-          size="xsmall"
+          size="small"
           href="https://www.linkedin.com/in/emily-fang-xiong-nielsen-456326327/"
-          input="Emily Fang Xiong"
+          input="Emily Fang Xiong Nielsen"
         />
       </div>
-      <div class="flex flex-col items-center gap-padding-xxs">
+      <div class="pb-spacebar-ds col-start-8 col-end-12 flex flex-row items-center gap-[8px]">
         <a href="tel:+4542416188">
-          <img src="/svg/tlf-icon.svg" alt="Tlf ikon" /></a
+          <img src="/svg/tlf.svg" alt="Tlf ikon" /></a
         >
         <Link
           variant="secondary"
-          size="xsmall"
+          size="small"
           href="tel:+4542416188"
-          input="42416188"
+          input="+45 42416188"
         />
       </div>
-      <div class="flex flex-col items-center gap-padding-xxs">
-        <a href="mailto:emily.nielsen00@gmail.com"
-          ><img src="/svg/mail-icon.svg" class="max-w-fit" alt="Mail ikon" /></a
+    
+  
+      <div class="col-start-4 col-end-8 flex flex-row items-center gap-[8px]">
+        <a href="mailto:emily.nielsen09@gmail.com"
+          ><img src="/svg/mail.svg" class="max-w-fit" alt="Mail ikon" /></a
         >
         <Link
           variant="secondary"
-          size="xsmall"
+          size="small"
           href="mailto:emily.nielsen00@gmail.com"
           input="@emily.nielsen09@gmail.com"
         />
       </div>
+
+      <div class="col-start-8 col-end-12 flex flex-row items-center gap-[8px]">
+       
+          <img src="/svg/lokation.svg" class="max-w-fit" alt="Mail ikon" />
+        
+        <Link
+          variant="secondary"
+          size="small"
+          
+          input="København, DK"
+        />
+      </div>
+     
     </div>
 
-    <div class="flex justify-center gap-padding-ml">
+   <div class="flex flex-row justify-center items-center gap-spacebar-ds ">
+     
+     
+   
+<a href="#hero" class="text-magic-300 font-body text-p-d">Back to top ↑</a>
+
       <a href="/pdf/CV_v-figma.pdf"
       download="CV_v-figma.pdf"
-        ><Button variant="primary" size="desktop" input="Download CV" /></a
+        ><Button variant="primary" size="mobil" input="Download CV" /></a
       >
-      <a href="#hero"><Button variant="primary" size="desktop" input="Top" /></a
-      >
+
+        
     </div>
   </div>
 </footer>

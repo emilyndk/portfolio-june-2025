@@ -1,26 +1,25 @@
 ---
-const { variant = "primary", size = "desktop", input } = Astro.props;
+const { variant = "primary", input } = Astro.props;
 
 // gælder for alle //
 const buttonStyling =
-  " transition-all duration-300 ease-in-out  border rounded-full font-p-light whitespace-nowrap  ";
+  " transition-all min-w-[100px] py-[4px] duration-300 ease-in-out  border rounded-full font-p-s-d whitespace-nowrap lg:font-p-s-m px-spacebar-ms lg:px-spacebar-ds text-p-m-m lg:text-p-s-d font-body  ";
 
 const variantClasses = {
   primary:
-    "border-obsidian text-obsidian hover:bg-obsidian hover:text-mist hover:border-mist",
-  secondary: "border-mist text-mist hover:bg-mist hover:text-obsidian hover:border-obsidian",
+    "border-magic-500 border text-magic-500 hover:bg-magic-300",
+  secondary: "border-obsidian-500  text-obsidian-500 hover:bg-magic-300",
+  tertiary: "border-sand-500 text-sand-500 hover:bg-sand-300",
 };
 
-const sizeClasses = {
-  desktop: "text-button-d px-padding-m py-padding-xs",
-  mobil: "min-w-[200px] text-button-m px-padding-xs py-padding-xxs",
-};
+
+
 ---
 
 <button
 id=""
   class="buttonComponent"
-  class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}
+  class:list={[buttonStyling, variantClasses[variant],]}
   ><slot />
   <div class="">{input}</div>
 </button>

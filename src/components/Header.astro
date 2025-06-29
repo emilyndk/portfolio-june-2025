@@ -3,66 +3,93 @@ import Link from "./Link.astro";
 const { links = [] } = Astro.props;
 ---
 
-<header id="mobil-header" class=" fixed top-0 w-screen z-[2000]">
-  <!-- Mobile icons  -->
-  <button
+<section id="mobil-header" class="px-[16px] w-screen grid grid-cols-grid-mobil lg:hidden gap-gap-mobil pb-spacebar-mm pt-spacebar-ms">
+
+
+
+  
+    <button
     id="burger-button"
-    class="w-full flex flex-row justify-end pr-padding-ml pt-padding-ml fixed z-50 lg:hidden transition-opacity duration-200"
+    class="pt-spacebar-ms  col-start-12 col-end-12  z-50 lg:hidden transition-opacity duration-200"
   >
     <div
       id="streger"
       class="open-icon transition-transform duration-300 opacity-100 scale-100"
     >
-      <img src="/svg/streger.svg" alt="Burger" />
+      <img src="/svg/burger.svg" class="w-full" alt="Burger" />
     </div>
     <div
       id="kryds"
-      class="close-icon transition-transform duration-300 opacity-0 scale-75 absolute"
+      class="close-icon transition-transform duration-300 opacity-0 scale-75 "
     >
-      <img src="/svg/kryds.svg" alt="Kryds" />
+      <img src="/svg/line.svg" alt="Kryds" />
     </div>
   </button>
 
-  <!-- Mobile menu -->
-  <div
+
+
+</section>
+
+
+
+<div
     id="mobile-menu"
-    class="bg-gradient-to-b from-mist to-violet fixed w-full h-full flex items-center justify-center opacity-0 transition-opacity duration-300 lg:hidden"
+    class="bg-magic-500  top-0 fixed w-full h-full flex items-center justify-center opacity-0 transition-opacity duration-300 lg:hidden"
   >
     <nav>
-      <ul class="flex flex-col text-center gap-padding-ml">
-        <Link variant="primary" input="Hjem" size="large" href="/#hero" />
+      <ul class="flex flex-col text-center gap-spacebar-ds">
+        <Link variant="primary"  input="Hjem" size="large" href="/#hero" />
         <Link variant="primary" input="Om" size="large" href="/#om" />
         <Link
           variant="primary"
           input="Projekter"
-          size="large"
           href="/#projekter"
+        />
+         <Link
+          variant="primary"
+          input="Download CV"
+          href="/#CV"
         />
         <Link variant="primary" input="Kontakt" size="large" href="#footer" />
       </ul>
     </nav>
   </div>
-</header>
 
-<header id="desktop-header" class="w-screen fixed top-0">
-  <!-- Desktop menu -->
-  <div
-    class="hidden lg:block mt-padding-s mx-padding-xl border-b border-obsidian"
-  >
-    <div class="flex justify-center gap-padding-xl">
-      <Link variant="primary" input="Hjem" size="large" href="/#hero" />
-      <Link variant="primary" input="Om" size="large" href="/#om" />
-      <Link
-        variant="primary"
-        input="Projekter"
-        size="large"
-        href="/#projekter"
-      />
-      <Link variant="primary" input="Kontakt" size="large" href="#footer" />
-    </div>
-  </div>
 
-  <script>
+
+
+
+
+
+
+
+<div id="desktop-header" class="hidden lg:block">
+<div class=" grid grid-cols-grid-desktop gap-gap-desktop w-screen mx-margin-desktop pt-spacebar-ds pb-spacebar-dm">
+<div class="flex flex-row items-center justify-between col-start-1 col-end-12 ">
+
+<a href="/" class="flex flex-row items-center gap-spacebar-ds ">
+  <img src="/svg/portrait-round.png" alt="Emily">
+  <p class="text-obsidian-500 text-p-l-d font-body whitespace-nowrap">Emily Nielsen</p>
+</a>
+
+
+<div class="flex flex-row items-center gap-spacebar-ds self-end">
+
+    <Link input="Om" variant="secondary" href="#om"></Link>
+    
+      <Link input="Projekter" variant="secondary" href="#projekter"></Link>
+        <Link input="Download CV" variant="secondary" href="#cv"></Link>
+        <Link input="Kontakt" variant="secondary" href="#footer"></Link>
+</div>
+
+</div>
+</div>
+</div>
+
+
+
+
+ <script>
     // Get all the section links and sections
     const navLinks = document.querySelectorAll("[data-navlink]");
     const sections = document.querySelectorAll("section");
@@ -171,4 +198,3 @@ const { links = [] } = Astro.props;
       }
     });
   </script>
-</header>
