@@ -1,0 +1,126 @@
+---
+import Link from "./Link.astro";
+import Button from "./Button.astro";
+---
+
+<footer id="" class="">
+  <div id="footer-mobil" class="lg:hidden flex flex-col gap-padding-ml py-padding-ml border-t border-obsidian justify-center">
+    <div class="flex flex-col items-center gap-padding-xxs">
+      <a href="https://www.instagram.com/exiongart/">
+        <img src="/svg/instagram-icon.svg" alt="Instagram ikon" /></a
+      >
+      <Link
+        variant="secondary"
+        size="xsmall"
+        href="https://www.instagram.com/exiongart/"
+        input="@exiongart"
+      />
+    </div>
+
+    <div class="flex flex-col items-center gap-padding-xxs">
+      <a href="https://www.linkedin.com/in/emily-fang-xiong-nielsen-456326327/"
+        ><img src="/svg/linkedin-icon.svg" alt="LinkedIn ikon" /></a
+      >
+      <Link
+        variant="secondary"
+        size="xsmall"
+        href="https://www.linkedin.com/in/emily-fang-xiong-nielsen-456326327/"
+        input="Emily Fang Xiong"
+      />
+    </div>
+    <div class="flex flex-col items-center gap-padding-xxs">
+      <a href="tel:+4542416188">
+        <img src="/svg/tlf-icon.svg" alt="Tlf ikon" /></a
+      >
+      <Link
+        variant="secondary"
+        size="xsmall"
+        href="tel:+4542416188"
+        input="42416188"
+      />
+    </div>
+    <div class="flex flex-col items-center gap-padding-xxs">
+      <a href="mailto:emily.nielsen00@gmail.com"
+        ><img src="/svg/mail-icon.svg" class="max-w-fit" alt="Mail ikon" /></a
+      >
+      <Link
+        variant="secondary"
+        size="xsmall"
+        href="mailto:emily.nielsen00@gmail.com"
+        input="@emily.nielsen09@gmail.com"
+      />
+    </div>
+
+    <div class="flex flex-col items-center gap-padding-xxs">
+      <a href="#hero"><Button variant="primary" size="mobil" input="Top" /></a>
+
+      <a href="/pdf/CV_v-figma.pdf"
+      download="CV_v-figma.pdf"
+        ><Button variant="primary" size="mobil" input="Download CV" /></a
+      >
+    </div>
+  </div>
+
+  <div
+    id="footer-desktop"
+    class="hidden lg:flex flex-col gap-padding-l justify-center h-[446px] border-t border-obsidian"
+  >
+    <div class="flex justify-center gap-padding-xl">
+      <div class="flex flex-col items-center gap-padding-xxs">
+        <a href="https://www.instagram.com/exiongart/">
+          <img src="/svg/instagram-icon.svg" alt="Instagram ikon" /></a
+        >
+        <Link
+          variant="secondary"
+          size="xsmall"
+          href="https://www.instagram.com/exiongart/"
+          input="@exiongart"
+        />
+      </div>
+
+      <div class="flex flex-col items-center gap-padding-xxs">
+        <a
+          href="https://www.linkedin.com/in/emily-fang-xiong-nielsen-456326327/"
+          ><img src="/svg/linkedin-icon.svg" alt="LinkedIn ikon" /></a
+        >
+        <Link
+          variant="secondary"
+          size="xsmall"
+          href="https://www.linkedin.com/in/emily-fang-xiong-nielsen-456326327/"
+          input="Emily Fang Xiong"
+        />
+      </div>
+      <div class="flex flex-col items-center gap-padding-xxs">
+        <a href="tel:+4542416188">
+          <img src="/svg/tlf-icon.svg" alt="Tlf ikon" /></a
+        >
+        <Link
+          variant="secondary"
+          size="xsmall"
+          href="tel:+4542416188"
+          input="42416188"
+        />
+      </div>
+      <div class="flex flex-col items-center gap-padding-xxs">
+        <a href="mailto:emily.nielsen00@gmail.com"
+          ><img src="/svg/mail-icon.svg" class="max-w-fit" alt="Mail ikon" /></a
+        >
+        <Link
+          variant="secondary"
+          size="xsmall"
+          href="mailto:emily.nielsen00@gmail.com"
+          input="@emily.nielsen09@gmail.com"
+        />
+      </div>
+    </div>
+
+    <div class="flex justify-center gap-padding-ml">
+      <a href="/pdf/CV_v-figma.pdf"
+      download="CV_v-figma.pdf"
+        ><Button variant="primary" size="desktop" input="Download CV" /></a
+      >
+      <a href="#hero"><Button variant="primary" size="desktop" input="Top" /></a
+      >
+    </div>
+  </div>
+</footer>

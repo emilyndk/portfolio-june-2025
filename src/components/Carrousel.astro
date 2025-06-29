@@ -1,0 +1,159 @@
+---
+import Card from "./Card.astro";
+---
+
+<div class="relative lg:hidden overflow-hidden w-full">
+  <!-- Carousel container for horizontal scrolling -->
+  <div
+    id="carousel"
+    class="flex flex-row overflow-x-auto scroll-smooth snap-x snap-center py-8 px-[16px] sm:px-[40px]"
+  >
+    <!-- Cards -->
+    <div class="snap-center shrink-0 w-[400px]">
+      <a href="https://hojskolendk.netlify.app/" target="_blank">
+        <Card
+          header={`Höjskolendk`}
+          text="Höjskolendk er en rejsehøjskole. Dette projekt handlede om at lave et redesign af Höjskolendk, med fokus på at forbedre brugeroplevelsen og optimere den visuelle identitet. Målet var ikke kun at opdatere designet, men også at arbejde med og implementere et solidt designsystem. En stor del af casen var at overføre designsystemet fra Figma til kode, hvilket styrkede både samarbejdet mellem design og udvikling og sikrede et mere effektivt workflow. "
+          bgImg="/img/hojskolendk.webp"
+          url="https://hojskolendk.netlify.app/"
+        />
+      </a>
+    </div>
+
+    <div class="snap-center shrink-0 w-[400px]">
+      <a
+        href="https://singleusesucksbackup.netlify.app/?fbclid=IwZXh0bgNhZW0CMTEAAR1mArOMrp3fPsJjYvVAQX3-n4zHUKU2bpj17u8VNmOlVIKFfIC_Bf1kGZ8_aem__8NBiaM20B69M-arsDehBQ"
+        target="_blank"
+      >
+        <Card
+          header={`#singleusesucks`}
+          text="Plastic Change er en organisation der arbejder på at reducere mængden af engangsplastik i verden. Organisationen fokuserer på at skabe opmærksomhed om de negative konsekvenser af plastaffald for miljøet og dyrelivet. #singleusesucks handlede om at udvikle en scrollytelling til Plastic Change. Vi brugte mange animationer for at fremme budskabet om at reducere engangsplastik. Vi brugte animationsbiblioteker som Motion One, Animista og Animate.css til at gøre oplevelsen mere interaktiv og visuelt spændende."
+          bgImg="/img/singleuse-sc.webp"
+          url="https://singleusesucksbackup.netlify.app/?fbclid=IwZXh0bgNhZW0CMTEAAR1mArOMrp3fPsJjYvVAQX3-n4zHUKU2bpj17u8VNmOlVIKFfIC_Bf1kGZ8_aem__8NBiaM20B69M-arsDehBQ"
+        />
+      </a>
+    </div>
+
+    <div class="snap-center shrink-0 w-[400px]">
+      <a href="https://digitalskrald.netlify.app/" target="_blank">
+        <Card
+          header={`Digital Cleanup Day`}
+          text="Digital Cleanup Day er en global begivenhed, der fokuserer på at rydde op i den digitale verden for at reducere energi- og ressourcetrækket fra internettet. Caseopgaven gik ud på at skabe et redesign til Digital Cleanup Days hjemmeside, men oversat til dansk. Målet var at opbygge erfaring med infografik og datavisualisering."
+          bgImg="/img/digitalskrald-sc.jpg"
+          url="https://digitalskrald.netlify.app/"
+        />
+      </a>
+    </div>
+
+    <div class="snap-center shrink-0 w-[400px]">
+      <a href="https://dferments.netlify.app/" target="_blank">
+        <Card
+          header={`Dferments.dk`}
+          text="Dferments er en lille lokal virksomhed, som specialiserer sig i kombucha. Dette var min gruppe og jegs eksamensprojekt fra 2. semester, som vi alle er meget stolte af. Opgaven var at finde en virksomhed og hjælpe dem med at udnytte deres digitale platforme. Vi udviklede SoMe content i form a billeder, videoer, stories. Derudover designede og udviklede vi en spritny hjemmeside til dem."
+          bgImg="/img/dferments-sc.jpg"
+          url="https://dferments.netlify.app/"
+        />
+      </a>
+    </div>
+
+    <div class="snap-center shrink-0 w-[400px]">
+      <a href="https://itmvgruppe9.netlify.app//" target="_blank">
+        <Card
+          header={`I tråd
+med verden`}
+          text="ITMV (I Tråd Med Verden) er en dansk tøjbutik, der fokuserer på bæredygtighed ved at give nyt liv til kasserede tekstiler. De bidrager til den grønne omstilling og skaber jobs for socialt udsatte kvinder. Casen gik ud på at designe og udvikle en webfeature til en lille virksomhed. Her legede vi meget med grafikker som især kan ses i den gennemgående røde tråd. Vi arbejdede også med lydafspilning."
+          bgImg="/img/itmv-sc.jpg"
+          url="https://itmvgruppe9.netlify.app//"
+        />
+      </a>
+    </div>
+
+    <div class="snap-center shrink-0 w-[400px]">
+      <a href="https://karrusel-team9.netlify.app/" target="_blank">
+        <Card
+          header={`Karrusel.dk`}
+          text="Karrusel Festival er en musikfestival i Danmark, der fokuserer på en intim stemning med musik fra både etablerede og nye kunstnere. Vi fik til opgave at udvikle og kode et redesign til Karrusel Festival. Målet var at få en forståelse af designsystemer og at oprette komponenter og variabler både i figma og i vscode."
+          bgImg="/img/karrusel-sc.jpg"
+          url="https://karrusel-team9.netlify.app/"
+        />
+      </a>
+    </div>
+
+    <div class="snap-center shrink-0 w-[400px]">
+      <a href="https://vildmaddk.netlify.app/" target="_blank">
+        <Card
+          header={`Vildmad.dk`}
+          text="Vildmad.dk er en dansk organisation, der fremmer brugen af vilde, spiselige planter i madlavning. Vi skulle lave en underside som er målrettet mod folkeskoleelever i 7. klasse. Vi havde store ambitioner for vildmad.dk, men nåede desværre ikke at få det hele i mål. Det var også en af de første rigtige cases, vi fik, da det var den første opgave i andet semester. Det overordnede mål var at bygge et datasystem og fetche data fra det. Vi arbejdede med Astro for første gang, brugte Astro props og dykkede ned i mere avanceret JavaScript. Selvom det visuelle design har plads til forbedring, lærte jeg meget af denne opgave."
+          bgImg="/img/vildmad.webp"
+          url="https://vildmaddk.netlify.app/"
+        />
+      </a>
+    </div>
+
+    <div class="snap-center shrink-0 w-[400px]">
+      <a href="https://pleasant04.netlify.app/" target="_blank">
+        <Card
+          header={`Pleasant.dk`}
+          text="Pleasant.dk er en tøjbutik, der tilbyder et udvalg af mode med fokus på bæredygtighed og tidløse designs. Pleasant var vores første caseopgave på første semester. Opgaven gik ud på selv at kontakte en virksomhed og lave et redesign af deres site, samt producere en større video og en SoMe-video. Vores site havde mange mangler og tekniske fejl, men jeg lærte utrolig meget, da det var den første rigtige hjemmeside, vi lavede. Tidligere havde vi kun arbejdet med små øvelser. Jeg lærte også at arbejde med Premiere Pro, researche, producere og redigere indhold til sites, hvilket var en værdifuld erfaring for mig."
+          bgImg="/img/pleasant.webp"
+          url="https://pleasant04.netlify.app/"
+        />
+      </a>
+    </div>
+    <!-- Repeat for more cards -->
+  </div>
+
+  <!-- Navigation buttons -->
+ 
+</div>
+
+<script>
+  const carousel = document.querySelector("#carousel");
+  const nextButton = document.querySelector("#next");
+  const prevButton = document.querySelector("#prev");
+
+  function updateCardWidth() {
+    // Recalculate card width including gap based on viewport
+    return document.querySelector(".snap-center").clientWidth + 16; // Gap 16px (adjust based on padding)
+  }
+
+  function scrollNext() {
+    const cardWidth = updateCardWidth();
+    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+
+    if (carousel.scrollLeft >= maxScroll) {
+      carousel.scrollTo({ left: 0, behavior: "smooth" });
+    } else {
+      carousel.scrollBy({ left: cardWidth, behavior: "smooth" });
+    }
+  }
+
+  function scrollPrev() {
+    const cardWidth = updateCardWidth();
+
+    if (carousel.scrollLeft <= 0) {
+      carousel.scrollTo({ left: carousel.scrollWidth, behavior: "smooth" });
+    } else {
+      carousel.scrollBy({ left: -cardWidth, behavior: "smooth" });
+    }
+  }
+
+  
+
+  // Auto-scroll every 5 seconds if the button is not disabled
+</script>
+
+<style>
+  #carousel {
+    scrollbar-width: none; /* Firefox */
+  }
+
+  #carousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+  }
+
+  /* Centering fix */
+  .snap-center {
+    scroll-snap-align: center;
+  }
+</style>

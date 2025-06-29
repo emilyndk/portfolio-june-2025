@@ -1,0 +1,25 @@
+---
+const { href = "#", variant = "primary", size = "large", input } = Astro.props;
+
+const linkStyling = "transition-all duration-300 ease-in-out text-center";
+
+const variantClasses = {
+  primary: "text-obsidian hover:text-violet aria-[current=page]:text-violet",
+  secondary:
+    "text-obsidian relative hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-middle after:block after:w-full after:h-[0.8px] after:bg-current after:content-[''] after:scale-x-0",
+};
+
+const sizeClasses = {
+  large: "text-link-m font-regular",
+  small: "text-link-s font-p-light",
+  xsmall: "text-p-s-d font-p-light",
+};
+---
+
+<a
+  href={href}
+  class:list={[linkStyling, variantClasses[variant], sizeClasses[size]]}
+  data-navlink
+>
+  {input}
+</a>

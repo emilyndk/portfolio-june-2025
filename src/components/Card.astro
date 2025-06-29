@@ -1,0 +1,57 @@
+---
+const { header, text, url = "#", bgImg = "" } = Astro.props;
+import Button from "./Button.astro";
+---
+
+<article
+  class="  bg-cover bg-center h-[500px] w-[300px] group   "
+  style={`background-image: url(${bgImg});`}
+>
+  <div
+    class="bg-obsidian bg-opacity-[99%] p-padding-s flex flex-col justify-between h-full  opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+  >
+    <!-- Container for header and text -->
+    <div class="flex flex-col gap-padding-xs items-center ">
+      <h1
+        class="text-center text-mist  font-p-regular text-p-l-d underline "
+      >
+        {
+          header.split("\n").map((line) => (
+            <>
+              {line} <br />
+            </>
+          ))
+        }
+      </h1>
+
+      <!-- Make the text scrollable if it overflows -->
+      <p
+        class="text-mist font-p-light text-p-s-d overflow-y-auto max-h-[280px]"
+      >
+        {text}
+      </p>
+    </div>
+
+    <!-- Button container -->
+    <div class="flex flex-col items-center">
+      <Button size="mobil" variant="secondary" class="" input="Besøg"></Button>
+    </div>
+  </div>
+</article>
+
+<style>
+  /* Fjern standard scrollbars */
+  p::-webkit-scrollbar {
+    width: 8px; /* Smal scrollbar */
+  }
+
+  p::-webkit-scrollbar-track {
+    background: transparent; /* Transparent baggrund på track */
+  }
+
+  p::-webkit-scrollbar-thumb {
+    background-color: #DBD7E9; /* Let grå farve til thumb */
+    border-radius: 10px; /* Rundere hjørner */
+  }
+
+</style>
