@@ -10,19 +10,19 @@ const { links = [] } = Astro.props;
   
     <button
     id="burger-button"
-    class="pt-spacebar-ms  col-start-12 col-end-12  z-50 lg:hidden transition-opacity duration-200"
+    class="pt-spacebar-ms  col-start-12 col-end-12 z-50 lg:hidden transition-opacity duration-200"
   >
     <div
       id="streger"
-      class="open-icon transition-transform duration-300 opacity-100 scale-100"
+      class="open-icon transition-transform duration-300 w-full flex flex-col h-full items-center justify-center opacity-100 scale-100"
     >
       <img src="/svg/burger.svg" class="w-full" alt="Burger" />
     </div>
     <div
       id="kryds"
-      class="close-icon transition-transform duration-300 opacity-0 scale-75 "
+      class="close-icon transition-transform duration-300 w-full flex flex-col h-full items-center opacity-0 scale-75 "
     >
-      <img src="/svg/line.svg" alt="Kryds" />
+      <img class="w-full" src="/svg/line.svg" alt="Kryds" />
     </div>
   </button>
 

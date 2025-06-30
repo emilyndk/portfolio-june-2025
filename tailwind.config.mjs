@@ -82,8 +82,8 @@ export default {
               'h2-d': ['96px', { lineHeight: 'auto',}],             
                'h3-d': ['10px', { lineHeight: 'auto',  }],
               // Headings mobile
-              'h1-m': ['44px', { lineHeight: '50px' }],
-              'h2-m': ['56px', { lineHeight: '50px',  }],
+              'h1-m': ['56px', { lineHeight: '50px' }],
+              'h2-m': ['44px', { lineHeight: '50px',  }],
               'h3-m': ['30px', { lineHeight: 'auto',  }],
              
       
