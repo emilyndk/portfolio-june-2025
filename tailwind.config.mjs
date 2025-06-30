@@ -78,17 +78,18 @@ export default {
               
               // Headings desktop
               fontSize: {
-              'h1-d': ['120px', { lineHeight: 'auto', }],
+              'h1-d': ['120px', { lineHeight: '120px', }],
               'h2-d': ['96px', { lineHeight: 'auto',}],             
                'h3-d': ['10px', { lineHeight: 'auto',  }],
               // Headings mobile
               'h1-m': ['44px', { lineHeight: '50px' }],
-              'h2-m': ['56px', { lineHeight: 'auto',  }],
+              'h2-m': ['56px', { lineHeight: '50px',  }],
               'h3-m': ['30px', { lineHeight: 'auto',  }],
              
       
               // Body desktop
               'p-l-d': ['32px', { lineHeight: 'auto',  }],
+              'p-ml-d': ['28px', { lineHeight: 'auto',  }],
               'p-d': ['24px', { lineHeight: 'auto',  }],
               'p-s-d': ['20px', { lineHeight: 'auto',  }],
                 'display-d': ['64px', { lineHeight: 'auto',  }],
@@ -97,6 +98,7 @@ export default {
                // Body mobile
               
                'p-l-m': ['30px', { lineHeight: 'auto',  }],
+               'p-ml-m': ['20px', { lineHeight: 'auto',  }],
                'p-m': ['13px', { lineHeight: 'auto',  }],
                'p-s-m': ['10px', { lineHeight: 'auto',  }],
                'display-m': ['24px', { lineHeight: 'auto',  }],

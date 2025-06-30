@@ -37,7 +37,7 @@ const { links = [] } = Astro.props;
   <img src="/svg/favicon.svg" alt="Loading" class="w-24 animate-pulse" />
 </div>
     <!-- Header -->
-    <header class="fixed hidden top-0 z-50 ">
+    <header class="fixed hidden w-full top-0 z-[300] ">
       <Header />
     </header>
 
@@ -47,7 +47,7 @@ const { links = [] } = Astro.props;
     </main>
 
     <!-- Footer -->
-    <footer id="footer">
+    <footer class="hidden" id="footer">
       <Footer />
     </footer>
     
@@ -69,12 +69,16 @@ const { links = [] } = Astro.props;
   window.addEventListener("load", () => {
     const loader = document.getElementById("loader");
     const main = document.querySelector("main");
+    const nav = document.querySelector("header");
+    const footer = document.querySelector("footer");
 
     loader.classList.add("opacity-0");
 
     setTimeout(() => {
       loader.classList.add("hidden");
       main.classList.remove("hidden");
+      footer.classList.remove("hidden");
+      nav.classList.remove("hidden");
     }, 500); // matches transition duration
   });
 </script>

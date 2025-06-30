@@ -3,7 +3,7 @@ const { variant = "primary", input } = Astro.props;
 
 // gælder for alle //
 const buttonStyling =
-  " transition-all min-w-[100px] py-[4px] duration-300 ease-in-out  border rounded-full font-p-s-d whitespace-nowrap lg:font-p-s-m px-spacebar-ms lg:px-spacebar-ds text-p-m-m lg:text-p-s-d font-body  ";
+  "jello-hover transition-all min-w-[100px] py-[4px] duration-300 ease-in-out  border rounded-full font-p-s-d whitespace-nowrap lg:font-p-s-m px-spacebar-ms lg:px-spacebar-ds text-p-m-m lg:text-p-s-d font-body  ";
 
 const variantClasses = {
   primary:
@@ -18,8 +18,14 @@ const variantClasses = {
 
 <button
 id=""
-  class="buttonComponent"
+  class="buttonComponent "
   class:list={[buttonStyling, variantClasses[variant],]}
   ><slot />
   <div class="">{input}</div>
 </button>
+
+<style>
+  .jello-hover:hover {
+  animation: rubberBand 0.9s;
+}
+</style>

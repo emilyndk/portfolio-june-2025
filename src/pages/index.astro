@@ -34,360 +34,60 @@ const projects = [
 
 <MainLayout title="Emily's Portfolio">
    
-  <section id="hero" class="h-screen pt-spacebar-mm pb-spacebar-mm lg:pt-spacebar-dm">
+  <section id="hero" class="h-full pt-spacebar-mm lg:pt-spacebar-dm">
 
-    <div id="hero-m" class="">
+    <div id="hero-m" class="lg:hidden">
 <div class="mx-margin-mobil grid grid-cols-grid-mobil gap-gap-mobil">
-  <h1 class="font-heading text-h1-m text-obsidian-500 col-start-1 col-span-10">Emily Fang Xiong Nielsen</h1>
-<p class="text-magic-500 font-body text-display-m -rotate-1 col-start-1 col-span-9 -mt-2">Multimediedesigner</p>
-<p class="text-obsidian-500 font-body text-p-m col-start-1 col-end-7 pt-spacebar-ms">I am passionate about creating aesthetic digital solutions with a strong focus on the user.</p>
+  <h1 id="hero-h1" class="font-heading text-h1-m text-obsidian-500 col-start-1 col-span-10 fade-left">Emily Fang Xiong Nielsen</h1>
+<p class="text-magic-500 font-body text-display-m -rotate-1 col-start-1 col-span-9 -mt-2 animate-pulse display">Webdesign Portfolio</p>
+<p id="hero-p" class="text-obsidian-500 font-body text-p-m col-start-1 col-end-7 pt-spacebar-ms"></p>
 <div class="flex flex-col gap-spacebar-ms col-start-8 col-span-full pt-spacebar-ms">
-  <Button href="#cv" variant="primary" input="Download CV"></Button>
-  <Button href="#projekter" variant="secondary" input="Se projekter"></Button>
+ <a href="#cv"> <Button  variant="primary" input="Download CV"></Button></a>
+  <a href="#projekter"><Button  variant="secondary" input="Se projekter"></Button></a>
 </div>
 </div>
 <div class="flex flex-col justify-center items-center py-spacebar-mm"><img id="scroll-arrow" class="w-[45px]" src="/svg/arrow.svg" alt="Pil ned"></div>
 </div>
 
- <div id="hero-d" class="lg:mx-margin-desktop lg:grid-cols-grid-desktop  lg:gap-gap-desktop">
-<h1 class="font-heading text-h1-m text-obsidian-500"></h1>
+ <div id="hero-d" class="hidden lg:block ">
+  <div class="mx-margin-desktop grid-cols-grid-desktop grid gap-gap-desktop">
+<h1 id="hero-h1" class="font-heading text-h1-d text-obsidian-500 col-start-1 col-span-8 fade-left">Emily Fang Xiong Nielsen</h1>
+<p class="font-body text-display-d text-magic-500 col-start-1 col-span-7 -rotate-1 -mt-4  display">Webdesign Portfolio</p>
+<div class="flex flex-row items-center justify-start gap-spacebar-ms col-start-1 col-span-5 py-spacebar-ds">
+  <div id="hero-btn-1"><a id="" href="#cv" class="hover:rotate-1 ease-in-out duration-300 transition-all"> <Button  variant="primary" input="Download CV"></Button></a></div> 
+<div id="hero-btn-2"> <a href="#projekter" class="hover:rotate-1 ease-in-out duration-300 transition-all"><Button  variant="secondary" input="Se projekter"></Button></a></div> 
+</div>
+<p id="hero-p" class="col-start-9 col-span-full text-p-d text-obsidian-500 font-body"></p>
+</div>
+<div class="flex flex-col justify-center items-center py-spacebar-dm"><img id="scroll-arrow" class="w-[92px]" src="/svg/arrow.svg" alt="Pil ned"></div>
 </div>
 
   </section>
 
-  <section id="om" class="border-b border-obsidian">
-    <div class="flex flex-col justify-center items-center">
-      <h2 id="bag-h1" class="font-header text-h2-m lg:text-h2-d text-obsidian my-padding-m">
-        
-      </h2>
-    </div>
+  <section id="om" class="pb-spacebar-mm lg:pb-spacebar-dm mx-margin-mobil lg:mx-margin-desktop">
+    <div class="flex flex-col justify-start items-start gap-spacebar-ms lg:gap-spacebar-ds">
+      <h2 id="om-h2" class="font-heading text-h2-m lg:text-h2-d text-obsidian-500 pb-spacebar-mm lg:pb-spacebar-dm">Bag skærmen</h2>
+      <div class="flex flex-col items-start gap-spacebar-ms lg:grid grid-cols-grid-desktop lg:gap-gap-desktop">
+        <div class="flex flex-col justify-between h-full items-start col-start-1 col-span-5">
+          <p id="om-p" class=" text-obsidian-500 font-body text-p-ml-m lg:text-p-ml-d">Hej! Mit navn er Emily. Jeg er 20 år gammel og er nyuddannet multimediedesigner dimmiteret fra Københavns Erhvervsakademi (KEA). <br> <br>
 
-    <div
-      id="studiekort-mobil"
-      class="bg-[url('/img/studiekort-bw-mobil.webp')] lg:hidden px-padding-l py-padding-ml bg-cover bg-center flex flex-col justify-center items-center gap-padding-ml"
-    >
-      <div class="flex flex-col justify-center items-center gap-padding-s">
-        <h3
-          class="text-mist text-h3-m font-header whitespace-nowrap text-center"
-        >
-          Kort om mig
-        </h3>
-        <p class="text-mist font-p-light text-p-m-m">
-          Jeg hedder Emily Fang Xiong Nielsen. Jeg er 20 år og studerer
-          multimediedesign på Københavns Erhvervsakademi (KEA), hvor jeg er på
-          3. semester og har valgfaget Digital Design. <br /><br />
+Jeg brænder for at skabe æstetiske og brugervenlige digitale løsninger. Under min uddannelse har jeg arbejdet med alt fra UI/UX-design til webudvikling. </p>
+<a id="om-btn" class="hidden lg:block" href="#footer"><Button input="Kontakt mig" variant="primary"></Button>   </a>
+</div>
 
-          Min kreative tilgang og interesse for kodning gør mig særligt glad for
-          faget, hvor jeg kan kombinere begge dele.
-        </p>
-      </div>
+<img id="om-img" class="rounded-sm col-start-9 col-span-full" src="/img/portrait.png" alt="Emily Nielsen"> 
 
-      <div class="flex flex-col justify-center items-center gap-padding-s">
-        <h3
-          class="text-mist text-h3-m font-header whitespace-nowrap text-center"
-        >
-          Interesser
-        </h3>
-
-        <div class="grid grid-cols-3 gap-padding-ml text-center">
-          <div class="flex flex-col gap-[3px] items-center">
-            <img class="" src="/svg/pencil-icon.svg" alt="Blyant" />
-            <p class="text-mist font-p-light text-p-s-m">Tegning</p>
-          </div>
-
-          <div class="flex flex-col gap-[3px] items-center">
-            <img class="" src="/svg/book-icon.svg" alt="Bog" />
-            <p class="text-mist font-p-light text-p-s-m">Læse</p>
-          </div>
-
-          <div class="flex flex-col gap-[3px] items-center">
-            <img class="" src="/svg/feather-icon.svg" alt="Fjer" />
-            <p class="text-mist font-p-light text-p-s-m">Skrive</p>
-          </div>
-
-          <div class="flex flex-col gap-[3px] items-center">
-            <img class="" src="/svg/netflix-icon.svg" alt="Netflix logo" />
-            <p class="text-mist font-p-light text-p-s-m whitespace-nowrap">
-              Film og <br /> serie
-            </p>
-          </div>
-
-          <div class="flex flex-col gap-[3px] items-center">
-            <img class="" src="/svg/tree-icon.svg" alt="Træ" />
-            <p class="text-mist font-p-light text-p-s-m whitespace-nowrap">
-              Gå ture
-            </p>
-          </div>
-
-          <div class="flex flex-col gap-[3px] items-center">
-            <img class="" src="/svg/brush-icon.svg" alt="Pensel" />
-            <p class="text-mist font-p-light text-p-s-m">Maling</p>
-          </div>
-
-          <div class="flex flex-col gap-[3px] items-center">
-            <img class="" src="/svg/globe-icon.svg" alt="Globus" />
-            <p class="text-mist font-p-light text-p-s-m">Sprog</p>
-          </div>
-
-          <div class="flex flex-col gap-[3px] items-center">
-            <img class="" src="/svg/controller-icon.svg" alt="Controller" />
-            <p class="text-mist font-p-light text-p-s-m">Sims 4</p>
-          </div>
-
-          <div class="flex flex-col gap-[3px] items-center">
-            <img class="" src="/svg/piano-icon.svg" alt="Klaver" />
-            <p class="text-mist font-p-light text-p-s-m">Klaver</p>
-          </div>
-        </div>
-      </div>
-
-      <a href="#footer"
-        ><Button input="Kontakt mig" size="mobil" variant="secondary" /></a
-      >
-    </div>
-
-    <div
-      id="studiekort-desktop"
-      class="bg-[url('/img/studiekort-bw-desk.webp')] hidden bg-cover bg-center lg:flex flex-col justify-center items-center"
-    >
-      <div class="flex flex-col justify-center items-center">
-        <div class="flex justify-center items-start">
-          <div
-            class="flex flex-col mb-padding-l ml-padding-m mr-padding-xl gap-padding-s pr-padding-m mt-padding-m items-start w-1/3"
-          >
-            <h3 id="kort-h1" class="text-mist text-h3-d font-header"></h3>
-            <p class="text-mist font-p-light text-p-m-d">
-              Jeg hedder Emily Fang Xiong Nielsen. <br />
-              Jeg er 20 år og studerer multimediedesign på Københavns Erhvervsakademi
-              (KEA), hvor jeg er på 3. semester og har valgfaget Digital Design.
-              <br />
-              <br />
-              Min kreative tilgang og interesse for kodning gør mig særligt glad
-              for faget, hvor jeg kan kombinere begge dele.
-            </p>
-          </div>
-
-          <div class="w-[1px] bg-mist h-[470px] absolute left-[50%]"></div>
-
-          <div
-            class="flex mb-padding-l mr-padding-m flex-col mt-padding-m gap-padding-s items-start"
-          >
-            <h3 id="interesser-h1" class="text-mist text-h3-d font-header"></h3>
-            <div class="grid grid-cols-4 gap-padding-ml text-center">
-              <div class="flex flex-col gap-[3px] items-center">
-                <img class="" src="/svg/pencil-icon.svg" alt="Blyant" />
-                <p class="text-mist font-p-light text-p-s-d">Tegning</p>
-              </div>
-
-              <div class="flex flex-col gap-[3px] items-center">
-                <img class="" src="/svg/book-icon.svg" alt="Bog" />
-                <p class="text-mist font-p-light text-p-s-d">Læse</p>
-              </div>
-
-              <div class="flex flex-col gap-[3px] items-center">
-                <img class="" src="/svg/feather-icon.svg" alt="Fjer" />
-                <p class="text-mist font-p-light text-p-s-d">Skrive</p>
-              </div>
-
-              <div class="flex flex-col gap-[3px] items-center">
-                <img class="" src="/svg/netflix-icon.svg" alt="Netflix logo" />
-                <p class="text-mist font-p-light text-p-s-d whitespace-nowrap">
-                  Film og <br /> serie
-                </p>
-              </div>
-
-              <div class="flex flex-col gap-[3px] items-center">
-                <img class="" src="/svg/tree-icon.svg" alt="Træ" />
-                <p class="text-mist font-p-light text-p-s-d whitespace-nowrap">
-                  Gå ture
-                </p>
-              </div>
-
-              <div class="flex flex-col gap-[3px] items-center">
-                <img class="" src="/svg/brush-icon.svg" alt="Pensel" />
-                <p class="text-mist font-p-light text-p-s-d">Maling</p>
-              </div>
-
-              <div class="flex flex-col gap-[3px] items-center">
-                <img class="" src="/svg/globe-icon.svg" alt="Globus" />
-                <p class="text-mist font-p-light text-p-s-d">Sprog</p>
-              </div>
-
-              <div class="flex flex-col gap-[3px] items-center">
-                <img class="" src="/svg/controller-icon.svg" alt="Controller" />
-                <p class="text-mist font-p-light text-p-s-d">Sims 4</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex relative items-center mb-padding-m">
-          <div class="h-[1px] bg-mist w-[625px]"></div>
-          <Button size="desktop" input="Kontakt mig" variant="secondary" />
-          <div class="h-[1px] bg-mist w-[625px]"></div>
-        </div>
-      </div>
-    </div>
-
-    <div
-      id="kvalifikationer-baggrund-mobil"
-      class="border border-obsidian lg:hidden flex-col flex justify-center items-center "
-    >
-      <div class="flex flex-col gap-padding-s items-center justify-center">
-        <h3 class="text-obsidian font-header text-h3-m">Kvalifikationer</h3>
-        <img class="" src="/svg/skillbars.svg" alt="Skills" />
-      </div>
-
-      <div class="flex flex-col gap-padding-s items-center justify-center">
-        <h3 class="text-obsidian font-header text-h3-m">Baggrund</h3>
-        <div class="flex flex-col items-start">
-          <div class="flex flex-col gap-padding-s">
-            <div class="flex gap-padding-xxs items-start">
-              <img src="/svg/violet-star.svg" alt="Stjerne" />
-              <div class="flex flex-col">
-                <p class="text-p-m-m font-p-light">
-                  Københavns Erhversakademi (2023-2025)
-                </p>
-                <p class="text-p-s-m font-p-light-italic">Multimediedesign</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex flex-col gap-padding-s">
-            <div class="flex gap-padding-xxs items-start">
-              <img src="/svg/violet-star.svg" alt="Stjerne" />
-              <div class="flex flex-col">
-                <p class="text-p-m-m font-p-light">
-                  Københavns VUC (2021-2023)
-                </p>
-                <p class="text-p-s-m font-p-light-italic">HF</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex flex-col gap-padding-s">
-            <div class="flex gap-padding-xxs items-start">
-              <img src="/svg/violet-star.svg" alt="Stjerne" />
-              <div class="flex flex-col">
-                <p class="text-p-m-m font-p-light">
-                  Kastanievej Efterskole (2020-2021)
-                </p>
-                <p class="text-p-s-m font-p-light-italic">Billedkunstlinje</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex flex-col gap-padding-s">
-            <div class="flex gap-padding-xxs items-start">
-              <img src="/svg/violet-star.svg" alt="Stjerne" />
-              <div class="flex flex-col">
-                <p class="text-p-m-m font-p-light">Praktik i Imperiet (2019)</p>
-                <p class="text-p-s-m font-p-light-italic">Grafisk design</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <a href="/pdf/CV_v-figma.pdf"
-      download="CV_v-figma.pdf"
-        ><Button variant="primary" size="mobil" input="Download CV" /></a
-      >
+</div>
+<a id="om-btn-m" class="lg:hidden" href="#footer"><Button input="Kontakt mig" variant="primary"></Button>   </a>
+</div>
+ </section>
 
 
-    </div>
+<section id="projekter" class="pb-spacebar-mm lg:pb-spacebar-dm mx-margin-mobil lg:mx-margin-desktop">
+<div class="flex flex-col items-start justify-start"><h2 id="projekter-h1" class="font-heading text-h2-m lg:text-h2-d text-obsidian-500 pb-spacebar-mm lg:pb-spacebar-dm">Projekter</h2></div>
+<div class="flex flex-col justify-start items-start  gap-spacebar-ms  lg:gap-spacebar-ds">
 
 
-    <div
-    id="kvalifikationer-baggrund-desk"
-    class="hidden lg:flex flex-col border border-obsidian mx-padding-ml my-padding-l justify-center items-center"
-  >
-    <div class="flex flex-col justify-center items-center">
-      <div class="flex justify-center items-start">
-        <div
-          class="flex flex-col mb-padding-l  gap-padding-m ml-padding-m mr-padding-xl pr-padding-m mt-padding-m items-center "
-        >
-          <h3 id="kval-h1" class="text-obsidian text-h3-d font-header "></h3>
-          <img class="" src="/svg/skillbars.svg" alt="Skills" />
-        </div>
-
-        <div class="w-[1px] bg-obsidian h-[530px] absolute left-[50%]"></div>
-
-        <div
-          class="flex mb-padding-l mr-padding-m  flex-col mt-padding-m gap-padding-m items-center"
-        >
-          <h3 id="baggrund-h1" class="text-obsidian text-h3-d font-header"></h3>
-          <div class="flex flex-col gap-padding-s items-center justify-center">
-           
-            <div class="flex flex-col items-start">
-              <div class="flex flex-col gap-padding-s">
-                <div class="flex gap-padding-xxs items-start">
-                  <img src="/svg/violet-star.svg" alt="Stjerne" />
-                  <div class="flex flex-col">
-                    <p class="text-p-m-d font-p-light">
-                      Københavns Erhversakademi (2023-2025)
-                    </p>
-                    <p class="text-p-s-d font-p-light-italic">Multimediedesign</p>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="flex flex-col gap-padding-s">
-                <div class="flex gap-padding-xxs items-start">
-                  <img src="/svg/violet-star.svg" alt="Stjerne" />
-                  <div class="flex flex-col">
-                    <p class="text-p-m-d font-p-light">
-                      Københavns VUC (2021-2023)
-                    </p>
-                    <p class="text-p-s-d font-p-light-italic">HF</p>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="flex flex-col gap-padding-s">
-                <div class="flex gap-padding-xxs items-start">
-                  <img src="/svg/violet-star.svg" alt="Stjerne" />
-                  <div class="flex flex-col">
-                    <p class="text-p-m-d font-p-light">
-                      Kastanievej Efterskole (2020-2021)
-                    </p>
-                    <p class="text-p-s-d font-p-light-italic">Billedkunstlinje</p>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="flex flex-col gap-padding-s">
-                <div class="flex gap-padding-xxs items-start">
-                  <img src="/svg/violet-star.svg" alt="Stjerne" />
-                  <div class="flex flex-col">
-                    <p class="text-p-m-d font-p-light">Praktik i Imperiet (2019)</p>
-                    <p class="text-p-s-d font-p-light-italic">Grafisk design</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="flex relative items-center ">
-        <div class="h-[1px] bg-obsidian w-[573px]"></div>
-        <a href="/pdf/CV_v-figma.pdf"
-      download="CV_v-figma.pdf"
-        ><Button variant="primary" size="desktop" input="Download CV" /></a
-      >
-        <div class="h-[1px] bg-obsidian w-[573px]"></div>
-      </div>
-    </div>
-  </div>
-
-    
-  </section>
-
-
-<section id="projekter" class="py-spacebar-ms lg:py-spacebar-ds mx-margin-mobil">
-
-<div class="flex flex-col justify-start items-start gap-spacebar-ds lg:gap-[48px]">
-
-<h2 id="projekter-h1" class="font-heading text-h2-m lg:text-h2-d text-obsidian-500"></h2>
 
 <div class="flex flex-col lg:flex-row gap-spacebar-ms lg:gap-spacebar-ds ">
   {projects.map((project) => (
@@ -405,7 +105,7 @@ const projects = [
 
 
 
-<a href="/projekter"><div class="lg:hidden"><Button variant="primary" size="mobil" input="Se alle projekter"></Button></div><div class="lg:block hidden"><Button variant="primary" size="desktop" input="Se alle projekter"></Button></div></a>
+<a href="/projekter"><Button variant="primary"  input="Se alle projekter"></Button></a>
 
 </div>
 
@@ -414,98 +114,135 @@ const projects = [
 </section>
 
 
+<section id="cv" class="mx-margin-mobil lg:mx-margin-desktop grid grid-cols-grid-mobil lg:grid-cols-grid-desktop gap-gap-mobil lg:gap-gap-desktop">
+
+<h2 id="cv-h1" class="text-obsidian-500 font-heading text-h2-m lg:text-h2-d col-start-1 col-span-full lg:col-span-8 pb-spacebar-mm lg:pb-spacebar-dm">Curriculum Vitare</h2>
+<div class="col-start-1 col-span-full flex flex-col lg:flex-row gap-spacebar-mm lg:gap-spacebar-dm items-start">
+<img class=" lg:block hidden" src="/svg/uddannelse-d.svg" alt="CV udkast">
+<img class=" lg:hidden" src="/svg/uddannelse-m-d.svg" alt="CV udkast">
+<img class="hidden lg:block " src="/svg/kompetencer-d-d.svg" alt="Kompetencer">
+<img class=" lg:hidden " src="/svg/kompetencer-m-d.svg" alt="Kompetencer">
+
+</div>
+<div class="col-start-1 col-span-full flex flex-col items-start pt-spacebar-ms lg:pt-spacebar-ds justify-start gap-spacebar-ms">
+ <a class="col-start-1 col-span-full" href="/pdf/CV_Emily_Nielsen_DA.pdf"
+      download="CV_Emily_Nielsen_DA.pdf"
+        ><Button variant="primary"  input="Download CV (da)" /></a
+      >
+
+
+      <a class="" href="/pdf/CV_Emily_Nielsen_EN.pdf"
+      download="CV_Emily_Nielsen_EN.pdf"
+        ><Button variant="secondary"  input="Download CV (en)" /></a
+      >
+</div>
+</section>
+   
 
 
 </MainLayout>
 
 <script>
+  window.addEventListener("load", () => {
+  // your gsap.from(... { scrollTrigger }) code here
+});
+
   import gsap from "gsap";
  
- import { ScrollTrigger } from "gsap/ScrollTrigger";
-  
- import { TextPlugin } from "gsap/TextPlugin";
- gsap.registerPlugin(TextPlugin)
+
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { TextPlugin } from "gsap/TextPlugin";
+
+// Register plugins
+gsap.registerPlugin(TextPlugin, ScrollTrigger);
  
 gsap.to("#scroll-arrow",  { y: -10,  delay: 0.8, ease: "power1.out", duration: 0.6, repeat: -1, yoyo: true,})
 
  //replaces yourElement's text with "This is the new text" over the course of 2 seconds
-gsap.to("#portfolio-h1", {
-  duration: 1,
-  text: "Portfolio",
+gsap.to("#hero-p", {
+  duration: 2,
+  delay: 1,
+  text: "Jeg er passioneret omkring at skabe æstetiske digitale løsninger med fokus på brugeren",
   ease: "power1.in",
 });
 
-gsap.to("#bag-h1", {
-  duration: 1,
-  text: "Bag skærmen",
-  ease: "power1.in",
+gsap.from(".fade-left", {
+  duration: 3,      // animation lasts 1 second
+  opacity: 0,       // start fully transparent
+  x: -100,          // start 100 pixels left from original position
+  ease: "power2.out" // easing for smooth effect
+});
+
+gsap.from(".fade-right", {
+  duration: 3,      // animation lasts 1 second
+  opacity: 0,       // start fully transparent
+  x: -100,          // start 100 pixels left from original position
+  ease: "power2.out" // easing for smooth effect
+});
+
+
+
+gsap.from(".display", {
+  opacity: 0,
+  x: 100, // Comes in from the right
+  
+  stagger: 0.1, // Delay between clouds
+  ease: "power1.out",
+  duration: 3,
+  onComplete: () => {
+    // Start pulsing after entrance animation is complete
+    gsap.to(".display", {
+      scale: 1.01, // Slightly enlarge
+      duration: 1, // Time for each pulse
+      ease: "power1.inOut",
+      yoyo: true, // Reverse back to the original size
+      repeat: -1 // Infinite pulsing
+    });
+  }
+
+  
+});
+
+
+
+gsap.from("#hero-btn-1", {
+  duration: 2,      // animation lasts 1 second
+  opacity: 0,       // start fully transparent
+  y: -100,          // start 100 pixels left from original position
+ 
+});
+
+gsap.from("#hero-btn-2", {
+  duration: 2,      // animation lasts 1 second
+  opacity: 0,       // start fully transparent
+  y: 100,          // start 100 pixels left from original position
+ 
+});
+
+
+gsap.from("#scroll-arrow", {
+  duration: 4,
+  delay:5,      // animation lasts 1 second
+  opacity: 0,       // start fully transparent
+           // start 100 pixels left from original position
+ 
+});
+
+
+gsap.from("#om-h2, #om-p, #om-img,  #om-btn,  #om-btn-m", {
   scrollTrigger: {
-    trigger: "#bag-h1", // The element to watch for in view
-    start: "top 80%",  // When the top of the element hits 80% of the viewport
-    end: "top 50%",    // Optional: When the top of the element hits 50% of the viewport
-    toggleActions: "play none none none", // Play the animation on scroll
+    trigger: "#om",
+    start: "bottom 60%", 
+    scrub: false, // Animation will not be tied to scroll progress
+     markers: true
   },
+  opacity: 0,
+  x:70,
+  
+  duration: 2,
+  ease: "power2.out",
+  stagger: 0.5, // Stagger the animation of each element by 0.1 seconds
+ 
+  
 });
-
-
-gsap.to("#kort-h1", {
-  duration: 1,
-  text: "Kort om mig",
-  ease: "power1.in",
-  scrollTrigger: {
-    trigger: "#kort-h1", // The element to watch for in view
-    start: "top 50%",  // When the top of the element hits 80% of the viewport
-    toggleActions: "play none none none", // Play the animation on scroll
-  },
-});
-
-gsap.to("#interesser-h1", {
-  duration: 1,
-  text: "Interesser",
-  ease: "power1.in",
-  scrollTrigger: {
-    trigger: "#interesser-h1", // The element to watch for in view
-    start: "top 50%",  // When the top of the element hits 80% of the viewport
-    toggleActions: "play none none none", // Play the animation on scroll
-  },
-});
-
-
-gsap.to("#kval-h1", {
-  duration: 1,
-  text: "Kvalifikationer",
-  ease: "power1.in",
-  scrollTrigger: {
-    trigger: "#kval-h1", // The element to watch for in view
-    start: "top 50%",  // When the top of the element hits 80% of the viewport
-    toggleActions: "play none none none", // Play the animation on scroll
-  },
-});
-
-gsap.to("#baggrund-h1", {
-  duration: 1,
-  text: "Baggrund",
-  ease: "power1.in",
-  scrollTrigger: {
-    trigger: "#baggrund-h1", // The element to watch for in view
-    start: "top 50%",  // When the top of the element hits 80% of the viewport
-    toggleActions: "play none none none", // Play the animation on scroll
-  },
-});
-
-gsap.to("#projekter-h1", {
-  duration: 1,
-  text: "Projekter",
-  ease: "power1.in",
-  scrollTrigger: {
-    trigger: "#projekter-h1", // The element to watch for in view
-    start: "top 50%",  // When the top of the element hits 80% of the viewport
-    toggleActions: "play none none none", // Play the animation on scroll
-  },
-});
-
-
-
-
-  gsap.to("#scroll-arrow",  { y: -10,  delay: 0.8, ease: "power1.out", duration: 0.6, repeat: -1, yoyo: true,})
 </script>

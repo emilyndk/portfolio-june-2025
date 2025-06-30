@@ -63,29 +63,23 @@ const { links = [] } = Astro.props;
 
 
 
-<div id="desktop-header" class="hidden lg:block">
-<div class=" grid grid-cols-grid-desktop gap-gap-desktop w-screen mx-margin-desktop pt-spacebar-ds pb-spacebar-dm">
-<div class="flex flex-row items-center justify-between col-start-1 col-end-12 ">
+<div id="desktop-header" class="hidden lg:block w-full">
+  <div class="hidden mx-margin-desktop  grid-cols-grid-desktop lg:grid gap-gap-desktop bg-sand-300 my-4 rounded-full px-4 py-2">
+<div class="col-start-1 col-span-12 flex flex-row  items-center justify-between "><div class=""> <a class="gap-spacebar-ms flex flex-row items-center" href="/"> <img src="/svg/portrait-round.png" alt="Emily Nielsen"> <p class="text-p-d text-obsidian-500 font-body">Emily Nielsen</p></a></div> 
 
-<a href="/" class="flex flex-row items-center gap-spacebar-ds ">
-  <img src="/svg/portrait-round.png" alt="Emily">
-  <p class="text-obsidian-500 text-p-l-d font-body whitespace-nowrap">Emily Nielsen</p>
-</a>
-
-
-<div class="flex flex-row items-center gap-spacebar-ds self-end">
-
-    <Link input="Om" variant="secondary" href="#om"></Link>
-    
-      <Link input="Projekter" variant="secondary" href="#projekter"></Link>
-        <Link input="Download CV" variant="secondary" href="#cv"></Link>
-        <Link input="Kontakt" variant="secondary" href="#footer"></Link>
+<div class="flex flex-row items-center justify-start gap-spacebar-ds ">
+  <Link input="Hjem" variant="secondary" size="regular" href="/"></Link>
+    <Link input="Projekter" variant="secondary" size="regular" href="#projekter"></Link>
+      <Link input="Om" variant="secondary" size="regular" href="#om"></Link>
+        <Link input="Kontakt" variant="secondary" size="regular" href="#footer"></Link>
+  
 </div>
 
 </div>
-</div>
+
 </div>
 
+</div>
 
 
 
@@ -198,3 +192,24 @@ const { links = [] } = Astro.props;
       }
     });
   </script>
+
+  <script>
+  let lastScrollY = window.scrollY;
+  const header = document.getElementById("desktop-header");
+
+  window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      // scrolling down
+      header.style.transform = "translateY(-150%)";
+      header.style.transition = "transform 0.3s ease";
+    } else {
+      // scrolling up
+      header.style.transform = "translateY(0)";
+      header.style.transition = "transform 0.3s ease";
+    }
+
+    lastScrollY = currentScrollY;
+  });
+</script>

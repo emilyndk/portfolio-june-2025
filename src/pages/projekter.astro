@@ -10,6 +10,13 @@ import Carrousel from "../components/Carrousel.astro";
 
 
 const projects = [
+
+ {
+    header: "Stoisk Ro",
+    text: "Mit afsluttende eksamensprojekt på KEA var udviklingen af Stoisk Ro. En helt ny hjemmeside til en samtaleterapeut med speciale i stoicisme. Det var et samarbejde med en af mine gruppemedlemmers mand, og vi havde stort set frie rammer, hvilket gav os mulighed for at skabe noget fra bunden (baseret på en hel del grundig research af virksomhed og målgruppe vha. diverse brugertests, surveys, et langt interview, SWOT, BMC og andre værktøjer og metoder). Vi lagde stor vægt på projektstyringen, og det kunne mærkes. Ved hjælp af Double Diamond-metoden og Gannt chart lykkedes det os at planlægge effektivt og undgå den typiske stress til sidst med koden. Det gjorde processen fokuseret og behagelig. Resultatet blev et projekt, vi er meget stolte af, både fordi det er teknisk gennemarbejdet og processen fungerede så godt. Vores censor var imponeret over vores projekt, og hun delte os på sin Linkedin. Vi fik topkarakter.",
+    bgImg: "/img/stoiskro.png",
+    url: "https://stoiskro.netlify.app/",
+  },
   {
     header: "Book in a Box",
     text: "Tredje semesters eksamensopgave gik ud på at lave et unsolicited redesign af en selvvalgt virksomhed. Kravet var at det skulle være en abonnementbaseret virksomhed. Vi ville gerne finde en lidt mindre virksomhed, og vi browsede lidt på nettet indtil vi så stødte på Book in a Box. Vi syntes det var et fedt koncept, altså at de sælger abonnement på fantasy bøger, og hver måned får man sendt en boks med en bog og goodies. Det er ejeren der vælger bogen, og det fungerer lidt som en læseklub, fordi brugerne taler om bøgerne på Book in a Box' instagram. Vores mål for redesignet var at få fantasy aspektet til at være meget mere tydelig visuelt på selve hjemmesiden, samt gøre den mere brugervenlig og styrke kontinuiteten ift brugen af komponenter og farver. Vi eksperimenterede rigtig meget og kom til sidst frem til denne eventyrlige visuelle stil. Det her er en af projekter, jeg er allermest stolt af, og der er blevet lagt rigtig meget arbejde i fra alle i min gruppe. Vi lavede det hele sammen i designdelen, og fordelte arbejdet da det kom til koden. Min rolle var at kode forsiden, menuen og at tegne de håndtegnede illustrationer. Det var et godt samarbejde og har fået meget læring som jeg vil tage med mig.",
@@ -94,15 +101,15 @@ const projects = [
 
 <MainLayout title="Projekter">
 
-<div id="hero" class="h-screen flex flex-col justify-center  items-center border-b border-obsidian">
-<h1 class="text-obisidan projekter-h1 text-center text-h1-m lg:text-h1-d font-header text-obsidian "></h1>
+<div id="hero" class="h-full py-spacebar-mm lg:py-spacebar-dm grid grid-cols-grid-mobil lg:grid-cols-grid-mobil gap-gap-mobil lg:gap-gap-desktop items-center mx-margin-mobil lg:mx-margin-desktop">
+<h1 class="text-obsidian-500 projekter-h1 text-h1-m lg:text-h1-d font-heading col-start-1 col-span-full ">Projekter</h1>
 
-<p class=" lg:w-[600px] text-obsidian font-p-light-italic text-p-l-m  lg:text-p-l-d text-center">Dette er en håndfuld af de projekter, jeg er mest stolt over</p>
+<p class="hero-p col-start-1 col-span-5 text-obsidian-500 font-body text-p-m  lg:text-p-d "></p>
 </div>
 
-<div class="flex flex-col items-center justify-center">
+<div class="flex flex-col items-start justify-start mx-margin-mobil lg:mx-margin-desktop">
 
-<div id="projekter" class="flex flex-wrap gap-padding-s items-center  my-padding-l mx-padding-xl justify-center ">
+<div id="projekter" class="flex flex-wrap gap-spacebar-ms lg:gap-spacebar-ds items-start  justify-start ">
   {projects.map((project) => (
     <a href={project.url} target="_blank" class="card-link ">
       <Card 
@@ -136,12 +143,12 @@ const projects = [
 
 
 
-gsap.to(".projekter-h1", {
-  duration: 1,
-  text: "Projekter",
+gsap.to(".hero-p", {
+  duration: 2,
+  text: "Dette er en håndfuld af de projekter, jeg er mest stolt over",
   ease: "power1.in",
   scrollTrigger: {
-    trigger: ".projekter-h1", // The element to watch for in view
+    trigger: ".hero-p", // The element to watch for in view
     start: "top 50%",  // When the top of the element hits 80% of the viewport
     toggleActions: "play none none none", // Play the animation on scroll
   },
