@@ -3,31 +3,28 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import Card from "../components/Card.astro";
-import { Image } from "astro:assets";
-import thumbsup from "../assets/images/thumbsup.png";
-import Footer from "../components/Footer.astro";
-import Carrousel from "../components/Carrousel.astro";
-
-import Header from "../components/Header.astro";
 const projects = [
-  {
+   {
+  year:"2025",
     header: "Stoisk Ro",
-    text: "Mit afsluttende eksamensprojekt på KEA var udviklingen af Stoisk Ro. En helt ny hjemmeside til en samtaleterapeut med speciale i stoicisme. Det var et samarbejde med en af mine gruppemedlemmers mand, og vi havde stort set frie rammer, hvilket gav os mulighed for at skabe noget fra bunden (baseret på en hel del grundig research af virksomhed og målgruppe vha. diverse brugertests, surveys, et langt interview, SWOT, BMC og andre værktøjer og metoder). Vi lagde stor vægt på projektstyringen, og det kunne mærkes. Ved hjælp af Double Diamond-metoden og Gannt chart lykkedes det os at planlægge effektivt og undgå den typiske stress til sidst med koden. Det gjorde processen fokuseret og behagelig. Resultatet blev et projekt, vi er meget stolte af, både fordi det er teknisk gennemarbejdet og processen fungerede så godt. Vores censor var imponeret over vores projekt, og hun delte os på sin Linkedin. Vi fik topkarakter.",
+    text: "Mit afsluttende eksamensprojekt på KEA var udviklingen af Stoisk Ro, en ny hjemmeside til en samtaleterapeut med speciale i stoicisme. Vi havde stort set frie rammer og valgte at samarbejde med en af mine gruppemedlemmers mand, som arbejder som samtaleterapeut.\n\nDet gav os mulighed for at skabe noget fra bunden, baseret på solid research af både virksomhed og målgruppe gennem brugertests, surveys, et dybdegående interview, SWOT-analyse, Business Model Canvas og flere UX-metoder.\n\nVi prioriterede projektstyringen højt. Med Double Diamond-modellen og Gantt-chart kunne vi planlægge effektivt og undgå den klassiske tidspres til sidst i projektet. Det gjorde processen fokuseret, struktureret og behagelig.\n\nResultatet er et projekt, vi er rigtig stolte af, både fordi det er teknisk gennemarbejdet og processen fungerede så godt. I øvrigt var vores censor så imponeret over vores projekt, at hun delte os på sin LinkedIn. Vi fik topkarakter.",
     bgImg: "/img/stoiskro.webp",
     url: "https://stoiskro.netlify.app/",
   },
+  {
+    year:"2024",
+    header: "Book in a Box",
+    text: "På tredje semester fik vi til opgave at udarbejde et unsolicited redesign af en selvvalgt abonnementsbaseret virksomhed. Vi ønskede at arbejde med en mindre og lidt overset virksomhed, og efter lidt research faldt vi over Book in a Box.\n\nKonceptet er abonnement på fantasybøger, hvor abonnenter hver anden måned modtager en boks med en udvalgt bog og forskellige boglige goodies. Det er ejeren selv, der vælger bogen, og fællesskabet omkring udgivelserne lever især på virksomhedens Instagram, hvor læserne deler tanker og læseoplevelser, lidt som en moderne læseklub.\n\nVores mål med redesignet var at gøre fantasyuniverset mere levende og visuelt tilstedeværende på hjemmesiden, samtidig med at vi forbedrede brugeroplevelsen og skabte mere visuel sammenhæng i brugen af komponenter og farver. Vi eksperimenterede os frem til en stil, der føles både magisk og indbydende og som virkelig understøtter virksomhedens identitet.\n\nDet her er et af de projekter, jeg er meget tilfreds med. Vi lagde meget arbejde i det både sammen i designfasen og hver for sig i udviklingen. Jeg havde ansvaret for at kode forsiden og navigationen samt skabe de håndtegnede illustrationer, der er med til at understrege det fantasifulde udtryk. Det var et stærkt samarbejde, og jeg tog rigtig meget læring med mig videre derfra.",
+    bgImg: "/img/bookinabox.webp",
+    url: "https://bookinabox.netlify.app/",
+  },
  
   {
+    year:"2024",
     header: "Höjskolendk",
-    text: "Höjskolendk er en rejsehøjskole. Dette projekt handlede om at lave et redesign af Höjskolendk, med fokus på at forbedre brugeroplevelsen og optimere den visuelle identitet. Målet var ikke kun at opdatere designet, men også at arbejde med og implementere et solidt designsystem. En stor del af casen var at overføre designsystemet fra Figma til kode, hvilket styrkede både samarbejdet mellem design og udvikling og sikrede et mere effektivt workflow.",
+    text: "Höjskolendk er en rejsehøjskole, og i dette projekt arbejdede vi med at redesigne deres hjemmeside med fokus på en forbedret brugeroplevelse og en styrket visuel identitet.\n\n Målet var ikke blot at modernisere designet, men også at udvikle og implementere et gennemarbejdet designsystem.\n\nEn væsentlig del af opgaven bestod i at overføre designsystemet fra Figma til kode, hvilket både styrkede samarbejdet mellem design og udvikling og gav et mere strømlinet workflow.",
     bgImg: "/img/hojskolendk.webp",
     url: "https://hojskolendk.netlify.app/",
-  },
-  {
-    header: "#singleusesucks",
-    text: "Plastic Change er en organisation der arbejder på at reducere mængden af engangsplastik i verden. Organisationen fokuserer på at skabe opmærksomhed om de negative konsekvenser af plastaffald for miljøet og dyrelivet. #singleusesucks handlede om at udvikle en scrollytelling til Plastic Change. Vi brugte mange animationer for at fremme budskabet om at reducere engangsplastik. Vi brugte animationsbiblioteker som Motion One, Animista og Animate.css til at gøre oplevelsen mere interaktiv og visuelt spændende.",
-    bgImg: "/img/singleuse-sc.webp",
-    url: "https://singleusesucksbackup.netlify.app/?fbclid=IwZXh0bgNhZW0CMTEAAR1mArOMrp3fPsJjYvVAQX3-n4zHUKU2bpj17u8VNmOlVIKFfIC_Bf1kGZ8_aem__8NBiaM20B69M-arsDehBQ",
   },
 ];
 ---
@@ -93,11 +90,13 @@ Jeg brænder for at skabe æstetiske og brugervenlige digitale løsninger. Under
   {projects.map((project) => (
     <a href={project.url} target="_blank" class="">
       <Card 
-        header={project.header} 
-        text={project.text} 
-        bgImg={project.bgImg} 
-        url={project.url} 
-      />
+  header={project.header} 
+  text={project.text} 
+  bgImg={project.bgImg} 
+  url={project.url} 
+  year={project.year}
+/>
+
     </a>
   ))}
 </div>

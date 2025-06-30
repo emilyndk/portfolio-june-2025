@@ -1,12 +1,17 @@
 ---
-const { header, text, url = "#", bgImg = "" } = Astro.props;
+const { header, text, url = "#", bgImg = "", year } = Astro.props;
+
 import Button from "./Button.astro";
 ---
 
 <article
-  class="border border-magic-500 rounded-sm  bg-cover bg-center h-[500px] w-[300px] group   "
+  class="relative border border-magic-500 rounded-sm bg-cover bg-center h-[500px] w-[300px] group"
   style={`background-image: url(${bgImg});`}
 >
+
+
+
+ 
   <div
     class="bg-magic-500 bg-opacity-[99%] p-spacebar-ms flex flex-col justify-between h-full  opacity-0 group-hover:opacity-100 transition-opacity duration-300"
   >
@@ -25,17 +30,24 @@ import Button from "./Button.astro";
       </h1>
 
       <!-- Make the text scrollable if it overflows -->
-      <p
-        class="text-sand-500 font-body text-p-s-m lg:text-p-m overflow-y-auto max-h-[290px]"
-      >
-        {text}
-      </p>
+     <p class="text-sand-500 font-body text-p-s-m lg:text-p-m overflow-y-auto max-h-[330px] whitespace-pre-line">
+  {text}
+</p>
+
     </div>
 
     <!-- Button container -->
     <div class="flex flex-col items-center">
       <Button size="mobil" variant="tertiary" class="" input="Besøg"></Button>
     </div>
+
+    {year && (
+  <span
+    class="absolute bottom-4 right-2 text-magic-500 bg-sand-500 p-1 rounded-md px-2 font-heading text-p-s-m opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+  >
+    {year}
+  </span>
+)}
   </div>
 </article>
 
