@@ -109,7 +109,7 @@ const projects = [
 
 <div class="flex flex-col items-start justify-start mx-margin-mobil lg:mx-margin-desktop">
 
-<div id="projekter" class="flex flex-wrap gap-spacebar-ms lg:gap-spacebar-ds items-start  justify-start ">
+<div id="projekter-cards" class="flex flex-wrap gap-spacebar-ms lg:gap-spacebar-ds items-start  justify-start ">
   {projects.map((project) => (
     <a href={project.url} target="_blank" class="card-link ">
       <Card 
@@ -152,5 +152,22 @@ gsap.to(".hero-p", {
     start: "top 50%",  // When the top of the element hits 80% of the viewport
     toggleActions: "play none none none", // Play the animation on scroll
   },
+});
+
+gsap.from("#hero-h1, #projekter-cards", {
+  scrollTrigger: {
+    trigger: "#hero",
+    start: "top 60%", 
+    scrub: false, // Animation will not be tied to scroll progress
+     
+  },
+  opacity: 0,
+  x: 70,
+  
+  duration: 2,
+  ease: "power2.out",
+  stagger: 0.4, // Stagger the animation of each element by 0.1 seconds
+ 
+  
 });
 </script>

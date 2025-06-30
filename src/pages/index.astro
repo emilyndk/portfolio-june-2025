@@ -84,12 +84,12 @@ Jeg brænder for at skabe æstetiske og brugervenlige digitale løsninger. Under
 
 
 <section id="projekter" class="pb-spacebar-mm lg:pb-spacebar-dm mx-margin-mobil lg:mx-margin-desktop">
-<div class="flex flex-col items-start justify-start"><h2 id="projekter-h1" class="font-heading text-h2-m lg:text-h2-d text-obsidian-500 pb-spacebar-mm lg:pb-spacebar-dm">Projekter</h2></div>
+<div class="flex flex-col items-start justify-start"><h2 id="projekter-h2" class="font-heading text-h2-m lg:text-h2-d text-obsidian-500 pb-spacebar-mm lg:pb-spacebar-dm">Projekter</h2></div>
 <div class="flex flex-col justify-start items-start  gap-spacebar-ms  lg:gap-spacebar-ds">
 
 
 
-<div class="flex flex-col lg:flex-row gap-spacebar-ms lg:gap-spacebar-ds ">
+<div id="projekter-row" class="flex flex-col lg:flex-row gap-spacebar-ms lg:gap-spacebar-ds ">
   {projects.map((project) => (
     <a href={project.url} target="_blank" class="">
       <Card 
@@ -105,7 +105,7 @@ Jeg brænder for at skabe æstetiske og brugervenlige digitale løsninger. Under
 
 
 
-<a href="/projekter"><Button variant="primary"  input="Se alle projekter"></Button></a>
+<a id="projekter-btn" href="/projekter"><Button variant="primary"  input="Se alle projekter"></Button></a>
 
 </div>
 
@@ -116,8 +116,8 @@ Jeg brænder for at skabe æstetiske og brugervenlige digitale løsninger. Under
 
 <section id="cv" class="mx-margin-mobil lg:mx-margin-desktop grid grid-cols-grid-mobil lg:grid-cols-grid-desktop gap-gap-mobil lg:gap-gap-desktop">
 
-<h2 id="cv-h1" class="text-obsidian-500 font-heading text-h2-m lg:text-h2-d col-start-1 col-span-full lg:col-span-8 pb-spacebar-mm lg:pb-spacebar-dm">Curriculum Vitare</h2>
-<div class="col-start-1 col-span-full flex flex-col lg:flex-row gap-spacebar-mm lg:gap-spacebar-dm items-start">
+<h2 id="cv-h2" class="text-obsidian-500 font-heading text-h2-m lg:text-h2-d col-start-1 col-span-full lg:col-span-8 pb-spacebar-mm lg:pb-spacebar-dm">Curriculum Vitare</h2>
+<div id="cv-imgs" class="col-start-1 col-span-full flex flex-col lg:flex-row gap-spacebar-mm lg:gap-spacebar-dm items-start">
 <img class=" lg:block hidden" src="/svg/uddannelse-d.svg" alt="CV udkast">
 <img class=" lg:hidden" src="/svg/uddannelse-m-d.svg" alt="CV udkast">
 <img class="hidden lg:block " src="/svg/kompetencer-d-d.svg" alt="Kompetencer">
@@ -125,13 +125,13 @@ Jeg brænder for at skabe æstetiske og brugervenlige digitale løsninger. Under
 
 </div>
 <div class="col-start-1 col-span-full flex flex-col items-start pt-spacebar-ms lg:pt-spacebar-ds justify-start gap-spacebar-ms">
- <a class="col-start-1 col-span-full" href="/pdf/CV_Emily_Nielsen_DA.pdf"
+ <a id="cv-btn-1" class="col-start-1 col-span-full" href="/pdf/CV_Emily_Nielsen_DA.pdf"
       download="CV_Emily_Nielsen_DA.pdf"
         ><Button variant="primary"  input="Download CV (da)" /></a
       >
 
 
-      <a class="" href="/pdf/CV_Emily_Nielsen_EN.pdf"
+      <a id="cv-btn-2" class="" href="/pdf/CV_Emily_Nielsen_EN.pdf"
       download="CV_Emily_Nielsen_EN.pdf"
         ><Button variant="secondary"  input="Download CV (en)" /></a
       >
@@ -232,17 +232,58 @@ gsap.from("#scroll-arrow", {
 gsap.from("#om-h2, #om-p, #om-img,  #om-btn,  #om-btn-m", {
   scrollTrigger: {
     trigger: "#om",
-    start: "bottom 60%", 
+    start: "top 60%", 
     scrub: false, // Animation will not be tied to scroll progress
-     markers: true
+     
   },
   opacity: 0,
   x:70,
   
   duration: 2,
   ease: "power2.out",
-  stagger: 0.5, // Stagger the animation of each element by 0.1 seconds
+  stagger: 0.4, // Stagger the animation of each element by 0.1 seconds
  
   
 });
+
+
+
+
+gsap.from("#projekter-h2, #projekter-row, #projekter-btn", {
+  scrollTrigger: {
+    trigger: "#projekter",
+    start: "top 60%", 
+    scrub: false, // Animation will not be tied to scroll progress
+     
+  },
+  opacity: 0,
+  x:-70,
+  
+  duration: 2,
+  ease: "power2.out",
+  stagger: 0.4, // Stagger the animation of each element by 0.1 seconds
+ 
+  
+});
+
+
+
+
+gsap.from("#cv-h2, #cv-imgs, #cv-btn-1, #cv-btn-2", {
+  scrollTrigger: {
+    trigger: "#cv",
+    start: "top 60%", 
+    scrub: false, // Animation will not be tied to scroll progress
+     
+  },
+  opacity: 0,
+  x: 70,
+  
+  duration: 2,
+  ease: "power2.out",
+  stagger: 0.4, // Stagger the animation of each element by 0.1 seconds
+ 
+  
+});
+
 </script>

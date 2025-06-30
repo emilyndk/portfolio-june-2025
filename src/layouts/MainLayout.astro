@@ -31,27 +31,30 @@ const { links = [] } = Astro.props;
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tilt+Warp&display=swap" rel="stylesheet">
 
   </head>
-  <body class="bg-sand-500">
+ <!-- BODY -->
+<body class="bg-sand-500">
 
+  <!-- Loader -->
   <div id="loader" class="fixed inset-0 z-50 bg-[#fdfbf7] flex items-center justify-center transition-opacity duration-500">
-  <img src="/svg/favicon.svg" alt="Loading" class="w-24 animate-pulse" />
-</div>
-    <!-- Header -->
-    <header class="fixed hidden w-full top-0 z-[300] ">
-      <Header />
-    </header>
+    <img src="/svg/favicon.svg" alt="Loading" class="w-24 animate-pulse" />
+  </div>
 
-    <!-- Main Content -->
-    <main class="hidden">
-      <slot />
-    </main>
+  <!-- Header -->
+  <header class="fixed w-full top-0 z-[300] opacity-0 pointer-events-none transition-opacity duration-300">
+    <Header />
+  </header>
 
-    <!-- Footer -->
-    <footer class="hidden" id="footer">
-      <Footer />
-    </footer>
-    
-  </body>
+  <!-- Main -->
+  <main class="opacity-0 pointer-events-none transition-opacity duration-300">
+    <slot />
+  </main>
+
+  <!-- Footer -->
+  <footer class="opacity-0 pointer-events-none transition-opacity duration-300" id="footer">
+    <Footer />
+  </footer>
+</body>
+
 </html>
 
 <script>
@@ -75,10 +78,11 @@ const { links = [] } = Astro.props;
     loader.classList.add("opacity-0");
 
     setTimeout(() => {
-      loader.classList.add("hidden");
-      main.classList.remove("hidden");
-      footer.classList.remove("hidden");
-      nav.classList.remove("hidden");
-    }, 500); // matches transition duration
+      loader.style.display = "none";
+      [main, nav, footer].forEach((el) => {
+        el.classList.remove("opacity-0", "pointer-events-none");
+      });
+    }, 500);
   });
 </script>
+
